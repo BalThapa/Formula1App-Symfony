@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formula1 App{% endblock %} 
+
+{% block body %} 
+
+<div>
+    <h1>🏎️🏎️🏎️FORMULA1 2023🏎️🏎️🏎️</h1>
+     {% for data in data.MRData.RaceTable.Races %}
+     <a href = {{data.url}}>
+    <li>{{data.raceName|e}}</li>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
+
